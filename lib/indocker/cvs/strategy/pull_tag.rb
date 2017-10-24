@@ -15,8 +15,8 @@ class PullTag < Pull
   def use
     clean_if_exist(File.join(@work_dir, LocalGit::TAGS, @tag_name))
     clone(@repository_name, @tag_name, File.join(@work_dir, LocalGit::TAGS))
-    checkout(@tag_name)
-    delete(LocalGit::MASTER)
+    checkout(branch_name = @tag_name)
+    delete(branch_name = LocalGit::MASTER)
     checkout(LocalGit::MASTER, { :b => true })
   end
 

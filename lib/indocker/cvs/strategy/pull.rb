@@ -7,8 +7,7 @@ class Pull < Strategy
     raise "The method 'use' was called from base class"
   end
 
-  protected
-  
+  private
   def clean_if_exist(directory)
     FileUtils.rm_rf(File.expand_path(directory)) if directory
   end

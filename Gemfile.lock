@@ -2,14 +2,19 @@ PATH
   remote: .
   specs:
     indocker (0.0.0)
+<<<<<<< HEAD
       docker-api
       smart_ioc
       thor
+=======
+      smart_ioc
+>>>>>>> 2e2ce2f2b0632666091ae8757530353dd3258f52
 
 GEM
   remote: https://rubygems.org/
   specs:
     byebug (9.1.0)
+<<<<<<< HEAD
     docker-api (1.33.6)
       excon (>= 0.38.0)
       json
@@ -17,6 +22,23 @@ GEM
     json (2.1.0)
     smart_ioc (0.2.1)
     thor (0.20.0)
+=======
+    diff-lcs (1.3)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-mocks (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
+    smart_ioc (0.2.1)
+>>>>>>> 2e2ce2f2b0632666091ae8757530353dd3258f52
 
 PLATFORMS
   ruby
@@ -24,6 +46,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   indocker!
+  rspec
 
 BUNDLED WITH
    1.15.4

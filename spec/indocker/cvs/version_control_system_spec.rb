@@ -1,10 +1,14 @@
-require_relative '../../../lib/indocker/cvs/version_control_system.rb'
+require 'spec_helper'
 
 describe  'VersionControlSystem' do 
- 
+  
   context 'branch' do
-    before do
-      @version_control_system = VersionControlSystem.new("https://github.com/schacon/ruby-git", "test", nil, "workdir")
+    let(:version_control_system) do
+      @version_control_system =  VersionControlSystem.new( 
+        repository_name = "https://github.com/schacon/ruby-git",
+        branch_name     =  "test",
+        @tag_name       =  nil,
+        @work_dir =  "workdir")
     end
 
     it 'uses to pull from branch' do
@@ -19,8 +23,12 @@ describe  'VersionControlSystem' do
   end
 
   context 'tag' do
-    before do
-      @version_control_system = VersionControlSystem.new("https://github.com/schacon/ruby-git", nil, "v1.2.3", "workdir")
+    let(:version_control_system) do
+      @version_control_system =  VersionControlSystem.new( 
+        repository_name = "https://github.com/schacon/ruby-git",
+        branch_name     =  nil,
+        @tag_name       =  "v1.2.3",
+        @work_dir =  "workdir")
     end
 
     it 'uses to pull from tag' do
